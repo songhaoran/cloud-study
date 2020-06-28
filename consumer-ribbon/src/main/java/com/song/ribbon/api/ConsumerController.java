@@ -19,7 +19,7 @@ public class ConsumerController {
     @Autowired
     private ConsumerService consumerService;
 
-    @RequestMapping(value = "add", method = RequestMethod.GET)
+    @RequestMapping(value = "/b/add", method = RequestMethod.GET)
     public String add() {
         String add = consumerService.add();
         log.info("[add]result->{}", add);

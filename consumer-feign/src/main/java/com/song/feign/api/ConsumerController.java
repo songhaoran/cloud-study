@@ -20,7 +20,7 @@ public class ConsumerController {
     private ConsumerClient consumerClient;
 
 
-    @RequestMapping(value = "add", method = RequestMethod.GET)
+    @RequestMapping(value = "/a/add", method = RequestMethod.GET)
     public Integer add() {
         return consumerClient.add(10, 20);
     }
