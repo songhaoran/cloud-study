@@ -4,17 +4,19 @@ server:
 spring:
   application:
     #/{label}/{application}-{profile}.properties中的{application}部分
-    name: didispace
+    name: config-server
   cloud:
     config:
       #/{label}/{application}-{profile}.properties中的{profile}部分
-      profile: dev
+      profile: order
       #/{label}/{application}-{profile}.properties中的{label}
-      label: config-label-test
+      label: master
       #配置中心的地址
       uri: http://localhost:8000/
 
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:9001/eureka/,http://peer2:9002/eureka/
+      defaultZone: http://localhost:9000/eureka/
+      #注册中心高可用
+      #defaultZone=http://peer1:9001/eureka/,http://peer2:9002/eureka/
